@@ -1,0 +1,581 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    display: flex;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .frame, .frame2 {
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  select, input {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;  
+    height: 35px;
+    width: 120px;
+    font-size: 16px;   
+  }
+  input {
+    margin-left: 75px;
+  }
+  select.S {
+    width: 180px;
+  }
+  input.etc {
+    margin-top: 15px;
+  }
+  input.G {
+    margin-left: 0px;
+    width: 80px;
+    text-align: center;
+    background-color: #F3F3F3;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  input[type="radio"] {
+    height: 13px;
+    width: 13px; 
+  }
+    
+    /*--------------------------------*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 60px;
+        font-size: 16px;
+    }
+    table th, table td {
+        border: 1px solid #C8DAF0;
+        padding: 10px;
+        text-align: left;
+    }
+    table th {
+    	font-weight: normal;
+        background-color: #E7F5FF;
+        text-align: center;
+    }
+    table td {
+        padding: 15px;
+    	font-weight: normal;
+        text-align: left;
+    	vertical-align: top;
+    }
+    thead {
+        position: sticky;
+        top: 0;
+        background: #eee;
+    }
+   #gray {
+        background-color: #f8f6fa;
+    }
+    
+    /*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 20px;
+  }
+  .nn2 {
+    padding-left: 40px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .gray {
+    color: #00B050;
+    font-size: 12px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 2 : การส่งเสริมการให้บริการทางการเงินอย่างกว้างขวางและทั่วถึง</b>
+</div>
+
+<div class="head0"><b>หมวด ก. การเข้าถึงบริการทางการเงิน</b></div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 15 (การ์ดตัวเลือก)</b>
+  </div>
+
+<!--------------------------------------------- FP01 --------------------------------------------->
+
+<table>
+    <thead>
+      <tr>
+        <th style="min-width: 200px;"><b>รายการ</b></th>
+        <th style="min-width: 150px;"><b>ปัจจุบัน ท่านมี/ใช้<br>บริการทางการเงิน<br>ต่อไปนี้หรือไม่</b></th>
+        <th style="min-width: 210px;"><b>ระบุแหล่ง/สถาบันการเงิน<br>ที่ท่านไปใช้บริการ</b>
+        <th style="min-width: 150px;"><b>ท่านมีความต้องการ<br>ใช้บริการดังกล่าว<br>หรือไม่</b></th>
+        <th style="min-width: 80px;"><b>FP08</b></th>
+      </tr>
+    </thead>
+    <tbody id="table">
+
+<script>
+
+  function createOptions(i) {
+      let options = '';
+      const fullOptions = [
+        '01 - ธ.พาณิชย์',
+        '02 - บ.เงินทุน/เครดิตฟองซิเอร์',
+        '03 - สถาบันการเงินเฉพาะกิจ (เช่น ธกส. ธ.ออมสิน ธ.อิสลาม)',
+        '04 - บ.บัตรเครดิต/สินเชื่อส่วนบุคคล',
+        '05 - บ.หลักทรัพย์/จัดการกองทุนรวม',
+        '06 - บ.ประกัน',
+        '07 - บ.เช่าซื้อ/ลิสซิ่ง',
+        '08 - สหกรณ์ออมทรัพย์/ชุมนุมสหกรณ์/เครดิตยูเนี่ยน',
+        '09 - สถาบันการเงินประชาชน',
+        '10 - กองทุนหมู่บ้านและชุมชนเมือง',
+        '11 - โรงรับจำนำ/สถานธนานุบาล/สถานธนานุเคราะห์',
+        '12 - แพลตฟอร์มออนไลน์สำหรับเงินกู้ (เช่น Shopee, LineBK)',
+        '13 - แพลตฟอร์มตัวกลางสำหรับการกู้ยืมระหว่างบุคคล (P2P Lending)',
+        '14 - แพลตฟอร์มออนไลน์เพื่อการใช้จ่ายหรือการชำระเงิน (เช่น Truemoney, Rabbit, Linepay)',
+        '15 - ผู้ให้บริการในลักษณะตัวแทน (เช่น ไปรษณีย์ ร้านสะดวกซื้อ บุญเติม)',
+        '16 - กลุ่มออมทรัพย์/องค์กรการเงินชุมชนที่รับฝากเงิน',
+        '17 - ญาติ/บุคคลในครัวเรือน',
+        '18 - นายทุน/บุคคลอื่นนอกครัวเรือน (เช่น เงินกู้นอกระบบ)',
+        '19 - อื่น ๆ (เช่น สวัสดิการบริษัท) ระบุ'
+      ];
+      const optionSets = {
+        1: ['01', '02', '03', '08', '09', '10', '14', '15', '16', '17', '18', '19'],
+        2: ['01', '02', '03', '08', '09', '10', '15', '16', '17', '18', '19'],
+        3: ['01', '02', '03', '08', '09', '10', '14', '15', '16', '17', '18', '19'],
+        4: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19'],
+        5: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '16', '17', '18', '19'],
+        6: ['01', '03', '04', '12'],
+        7: ['01', '03', '04', '05', '06', '07', '08', '09', '10', '14'],
+        8: ['01', '03', '04', '05', '06', '07', '08', '09', '10', '14'],
+        9: ['01', '03', '05', '06', '14'],
+        10: ['01', '03', '05', '14'],
+        11: ['01', '03', '05', '14']
+      };
+      const selectedOptions = optionSets[i] || fullOptions.map(opt => opt.slice(0, 2));
+      selectedOptions.forEach(opt => {
+        const fullOption = fullOptions.find(option => option.startsWith(opt));
+        options += `<option value="${opt}">${fullOption}</option>`;
+      });
+      return options;
+  }
+    
+  function InsertSub() {
+    const tableBody = document.getElementById('table');
+    const itemNames = [
+      "บัญชีเงินฝากเพื่อใช้จ่าย",
+      "บัญชีเงินฝากเพื่อการออม",
+      "โอนเงิน",
+      "ชำระเงิน (รวมชำระหนี้)",
+      "สินเชื่อ (ไม่รวมบัตรเครดิต)",
+      "บัตรเครดิต",
+      "ประกันชีวิต",
+      "ประกันอื่น ๆ",
+      "กองทุนรวม",
+      "หุ้น/หุ้นกู้ภาคเอกชน",
+      "พันธบัตรรัฐบาล"
+    ];
+
+    itemNames.forEach((item, i) => {
+        const row = document.createElement('tr');
+        
+        let fp0206 = '';
+        for (let j = 2; j <= (i < 5 ? 6 : 4); j++) {
+        	fp0206 += `
+              แหล่งที่ ${j - 1} : 
+              <select id="FP0${j}_${i+1}" onchange="updateOptions(${i+1}, ${j})">
+                <option value="">-- กรุณาเลือก --</option>
+                ${createOptions(i+1)}
+              </select><br><br>
+            `;
+        }
+
+      row.innerHTML = `
+      	<td>${item}</td>
+      
+      	<td style="text-align: center;">
+            <select id="FP01_${i + 1}">
+                <option value="">-- กรุณาเลือก --</option>
+                <option value="0">0 - ไม่มี/ไม่ใช้</option>
+                <option value="1">1 - มี/ใช้</option>
+            </select>
+      	</td>
+        
+        <td>
+            ${fp0206}
+            ${i+1 <= 5 ? `
+                <br>
+                <div class="etc" id="FP0206_${i+1}_TDiv">
+                    <input id="FP0206_${i+1}_T" type="text" placeholder="ระบุแหล่งอื่น ๆ">
+                </div>` : ''}
+        </td>
+
+        <td style="text-align: center;">
+            <select id="FP07_${i + 1}">
+                <option value="">-- กรุณาเลือก --</option>
+                <option value="0">0 - ไม่ต้องการ</option>
+                <option value="1">1 - ต้องการ</option>
+            </select>
+        </td>
+        
+        <td style="text-align: center;">
+        	${i+1 >= 2 && i+1 <= 5 ? `
+            	<input class="G" type="text" id="FP08_${i+1}">` : ''}
+        </td>
+        
+      `;
+      
+      tableBody.appendChild(row);
+    });    
+  }
+  
+  InsertSub();
+  
+</script>
+
+</tbody>
+</table>
+
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 1.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage(); 
+    window.location.href = 'Chapter 2-1.html';}
+
+<!--------------------------------------------------------------------->
+
+function checkDisability(input) {
+        var selectElement = document.getElementById(input);
+        var selectedValue = selectElement.value;
+        var message = document.createElement('div');
+        
+        if (selectedValue === ".") {
+        	alert('กรุณาเลือกคำตอบ');
+            message.textContent = ('กรุณาเลือกคำตอบ');
+            message.style.color = "red";
+            var selectDiv = selectElement.parentElement;
+            selectDiv.appendChild(message);
+            setTimeout(function() {
+                message.remove();
+            }, 3000);
+            selectElement.value = "";
+        }
+}
+
+<!--------------------------------------------------------------------->
+
+function updateOptions(i, current) {
+    const selectedValues = [];
+    for (let j = 2; j <= (i < 5 ? 6 : 4); j++) {
+        const select = document.getElementById(`FP0${j}_${i}`);
+        if (select.value) selectedValues.push(select.value);
+    }
+
+    for (let j = 2; j <= (i < 5 ? 6 : 4); j++) {
+        if (j === current) continue;
+        const select = document.getElementById(`FP0${j}_${i}`);
+        const previousValue = select.value;
+        select.innerHTML = '<option value="">-- กรุณาเลือก --</option>' + createOptions(i);
+        selectedValues.forEach(value => {
+            if (value !== previousValue) {
+                const option = select.querySelector(`option[value="${value}"]`);
+                if (option) option.remove();
+            }
+        });
+        select.value = previousValue;
+    }
+}
+
+<!--------------------------------------------------------------------->
+
+    function Custom(inputId, customValue, divId) {
+        var input = document.getElementById(inputId);
+        var inputValue = parseInt(input.value); 
+        var div = document.getElementById(divId);
+
+        if (inputValue === customValue) {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+    function NotEmpty(inputId, divId) {
+        var input = document.getElementById(inputId);
+        var div = document.getElementById(divId);
+
+        if (input.value !== '') {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+
+
+<!--------------------------------------------------------------------->
+
+function Others() {
+  for (let i = 1; i <= 5; i++) {
+    let showOtherInput = false;
+    for (let j = 2; j <= 6; j++) {
+      const selectElement = document.getElementById(`FP0${j}_${i}`);
+      if (selectElement && selectElement.value === '19') {
+        showOtherInput = true;
+        break;
+      }
+    }
+    const otherInputDiv = document.getElementById(`FP0206_${i}_TDiv`);
+    if (otherInputDiv) {
+      otherInputDiv.style.display = showOtherInput ? 'block' : 'none';
+    }
+  }
+}
+
+<!--------------------------------------------------------------------->
+
+function calculateFP08() {
+  for (let i = 2; i <= 6; i++) {
+    const elements = ['FP02', 'FP03', 'FP04', 'FP05', 'FP06'].map(el => document.getElementById(`${el}_${i}`));
+    const values = elements.map(el => el.value.trim());
+
+    const allBlank = values.every(value => value === '');
+
+    if (allBlank) {
+      document.getElementById(`FP08_${i}`).value = '';
+    } else {
+      const range1to15OrBlank = values.every(value => value === '' || (parseInt(value) >= 1 && parseInt(value) <= 15));
+      const range16to19OrBlank = values.every(value => value === '' || (parseInt(value) >= 16 && parseInt(value) <= 19));
+
+      if (range1to15OrBlank) {
+        document.getElementById(`FP08_${i}`).value = '0';
+      } else if (range16to19OrBlank) {
+        document.getElementById(`FP08_${i}`).value = '1';
+      } else {
+        document.getElementById(`FP08_${i}`).value = '2';
+      }
+    }
+  }
+}
+
+<!--------------------------------------------------------------------->
+
+function allF() {
+
+    for (let i = 1; i <= 11; i++) {
+        Custom(`FP01_${i}`, 0, `FP07_${i}`);
+        Custom(`FP01_${i}`, 1, `FP02_${i}`);
+        NotEmpty(`FP02_${i}`, `FP03_${i}`);
+        NotEmpty(`FP03_${i}`, `FP04_${i}`);
+        
+    	if (i <= 5) {
+            NotEmpty(`FP04_${i}`, `FP05_${i}`);
+            NotEmpty(`FP05_${i}`, `FP06_${i}`);
+    	}
+    }
+
+    for (let i = 1; i <= 11; i++) {
+        for (let j = 2; j <= (i < 5 ? 6 : 4); j++) {
+            updateOptions(i, j);
+        }
+    }
+    
+    Others();
+    calculateFP08();
+}
+
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+
+<!------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!------------------------------------------->
+
+function getLocalStorage() {
+	document.getElementById('BT46').value = parseInt(localStorage.getItem("AE00"));
+}
+
+<!------------------------------------------->
+
+    window.onload = function() {
+        inputIds.forEach(function(id) {
+            var inputField = document.getElementById(id);
+            inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            allF();
+            });
+
+            var value = localStorage.getItem(id);
+            if (value !== null) {
+                inputField.value = value;
+            } else {
+                inputField.value = "";
+            }
+        });
+        saveToLocalStorage();
+        allF();
+        
+        
+    };
+
+<!------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,766 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    display: flex;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .frame, .frame2 {
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  select, input {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;  
+    height: 35px;
+    width: 300px;
+    font-size: 16px;   
+  }
+  select.S {
+    width: 180px;
+  }
+  input.etc {
+    margin-top: 15px;
+  }
+  input.G {
+    width: 80px;
+    text-align: center;
+    background-color: #F3F3F3;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  input[type="radio"] {
+    height: 13px;
+    width: 13px; 
+  }
+  input[type="checkbox"] {
+    height: 13px;
+    width: 13px; 
+}
+    
+    /*--------------------------------*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 60px;
+        font-size: 16px;
+    }
+    table th, table td {
+        border: 1px solid #C8DAF0;
+        padding: 10px;
+        text-align: left;
+    }
+    table th {
+    	font-weight: normal;
+        background-color: #E7F5FF;
+        text-align: center;
+    }
+    table td {
+        padding: 15px;
+    	font-weight: normal;
+        text-align: center;
+    	vertical-align: top;
+    }
+    thead {
+        position: sticky;
+        top: 0;
+        background: #eee;
+    }
+   #gray {
+        background-color: #f8f6fa;
+    }
+    
+    /*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 40px;
+  }
+  .nn2 {
+    padding-left: 20px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .gray {
+    color: #00B050;
+    font-size: 12px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 2 : การส่งเสริมการให้บริการทางการเงินอย่างกว้างขวางและทั่วถึง</b>
+</div>
+
+<div class="head0"><b>หมวด ก. การเข้าถึงบริการทางการเงิน</b></div>
+<div class="head"><b>ปัจจุบันท่าน ไม่มี/ไม่ใช้บริการดังต่อไปนี้ และต้องการใช้บริการ<u>ในระบบ</u>นั้น แต่ไม่สามารถใช้ได้เพราะเหตุใด (FP07) <br>หรือปัจจุบันท่าน มี/ใช้บริการบริการดังต่อไปนี้ นอกระบบเพียงอย่างเดียว และไม่ใช้บริการ<u>ในระบบ</u>เพราะเหตุใด (FP08)</b></div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 17 - 20 (การ์ดตัวเลือก)</b> โดย<br><br>
+      การ์ดที่ 17 : เหตุผลที่ไม่มี/ไม่ใช้บริการ บัญชีเงินฝากเพื่อการออม<br>
+      การ์ดที่ 17 : เหตุผลที่ไม่มี/ไม่ใช้บริการ โอยเงิน<br>
+      การ์ดที่ 19 : เหตุผลที่ไม่มี/ไม่ใช้บริการ ชำระเงิน (รวมชำระหนี้)<br>
+      การ์ดที่ 20 : เหตุผลที่ไม่มี/ไม่ใช้บริการ สินเชื่อ (ไม่รวมบัตรเครดิต)<br>
+  </div>
+
+<!--------------------------------------------- BT03-BT10 --------------------------------------------->
+    
+    <table>
+    <thead>
+        <tr>
+            <th style="min-width: 210px;"><b>ประเภทบริการ</b></th>
+            <th style="min-width: 150px;"><b>แหล่ง/สถาบันการเงิน<br>ที่ให้บริการ<u>ในระบบ</u></b></th>
+            <th style="min-width: 400px;"><b>เหตุผลหลัก/ที่สำคัญ ที่ไม่มี/ไม่ใช้บริการ<br>ตอบได้ไม่เกิน 3 เหตุผล</b></th>
+        </tr>
+    </thead>
+    <tbody id="table">
+    
+<!------------------------------------------------------------------------------------>
+
+        <tr>
+            <td>
+                บัญชีเงินฝากเพื่อการออม<br><br>
+                FP07_2<br><br>
+                <input class="G" type="text" id="FP07_2"><br><br>
+                FP08_2<br><br>
+                <input class="G" type="text" id="FP08_2">
+            </td>
+        
+            <td style="text-align: left;">
+                ธนาคารพาณิชย์
+            </td>   
+        
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP21_1" class="FP21">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - ผลตอบแทนหรือดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP21_2" class="FP21">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - ผลตอบแทนหรือดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP21_3" class="FP21">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - ผลตอบแทนหรือดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select>
+            </td>   
+        </tr>
+    
+<!------------------------------------------------------------------------------------>
+
+        <tr>
+            <td rowspan="2">
+                โอนเงิน<br><br>
+                FP07_3<br><br>
+                <input class="G" type="text" id="FP07_3"><br><br>
+                FP08_3<br><br>
+                <input class="G" type="text" id="FP08_3">
+            </td>
+            
+        	<td style="text-align: left;">
+            	ธนาคารพาณิชย์
+        	</td>  
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP22_1" class="FP22">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP22_2" class="FP22">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP22_3" class="FP22">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select>
+            </td>
+    	</tr>
+        
+        <tr>
+            <td style="text-align: left;">
+                แพลตฟอร์มออนไลน์/ผู้ให้บริการในลักษณะตัวแทน
+            </td>
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP23_1" class="FP23">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP23_2" class="FP23">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP23_3" class="FP23">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select>
+            </td>
+        </tr>
+    
+<!------------------------------------------------------------------------------------>
+
+        <tr>
+            <td rowspan="2">
+                ชำระเงิน (รวมชำระหนี้)<br><br>
+                FP07_4<br><br>
+                <input class="G" type="text" id="FP07_4"><br><br>
+                FP08_4<br><br>
+                <input class="G" type="text" id="FP08_4">
+            </td>
+            
+        	<td style="text-align: left;">
+            	ธนาคารพาณิชย์
+        	</td>  
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP24_1" class="FP24">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP24_2" class="FP24">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP24_3" class="FP24">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select>
+            </td>
+    	</tr>
+        
+        <tr>
+            <td style="text-align: left;">
+                แพลตฟอร์มออนไลน์/ผู้ให้บริการในลักษณะตัวแทน
+            </td>
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP25_1" class="FP25">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP25_2" class="FP25">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP25_3" class="FP25">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - มีข้อจำกัดในการใช้สมาร์ทโฟนหรือคอมพิวเตอร์</option>
+                    <option value="3">3 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="4">4 - ค่าธรรมเนียมสูง</option>
+                    <option value="5">5 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="6">6 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                    <option value="7">7 - กังวลเรื่องความปลอดภัยของข้อมูลส่วนบุคคล/ธุรกรรม</option>
+                </select>
+            </td>
+        </tr>
+    
+<!------------------------------------------------------------------------------------>
+
+        <tr>
+            <td rowspan="2">
+                สินเชื่อ (ไม่รวมบัตรเครดิต)<br><br>
+                FP07_5<br><br>
+                <input class="G" type="text" id="FP07_5"><br><br>
+                FP08_5<br><br>
+                <input class="G" type="text" id="FP08_5">
+            </td>
+            
+        	<td style="text-align: left;">
+            	ธนาคารพาณิชย์
+        	</td>  
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP26_1" class="FP26">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP26_2" class="FP26">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP26_3" class="FP26">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select>
+            </td>
+    	</tr>
+        
+        <tr>
+            <td style="text-align: left;">
+                บ.สินเชื่อส่วนบุคคล/แพลตฟอร์มออนไลน์
+            </td>
+            
+            <td style="text-align: left;">
+                เหตุผลที่ 1 :
+                <select id="FP27_1" class="FP27">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 2 :
+                <select id="FP27_2" class="FP27">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select><br><br>
+                เหตุผลที่ 3 :
+                <select id="FP27_3" class="FP27">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="1">1 - ไม่มีความรู้ความเข้าใจ</option>
+                    <option value="2">2 - ไม่กล้าไปติดต่อ/คิดว่าติดต่อไปก็จะถูกปฏิเสธ</option>
+                    <option value="3">3 - ฐานะการเงิน/รายได้ไม่เพียงพอ</option>
+                    <option value="4">4 - ถูกปฏิเสธจากผู้ให้บริการ</option>
+                    <option value="5">5 - ประเภทผลิตภัณฑ์ทางการเงินไม่ตรงกับความต้องการ</option>
+                    <option value="6">6 - อัตราดอกเบี้ยไม่จูงใจ/ค่าธรรมเนียมสูง</option>
+                    <option value="7">7 - เงื่อนไข/ขั้นตอนยุ่งยาก</option>
+                    <option value="8">8 - ระยะทางไกล/ใช้เวลาเดินทางนาน/จำนวนสาขาน้อย</option>
+                </select>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+function DisOp(className) {
+    document.addEventListener("DOMContentLoaded", function() {
+        const selects = document.querySelectorAll(className);
+        
+        selects.forEach((select) => {
+            select.addEventListener('change', () => {
+                const values = Array.from(selects).map((s) => s.value);
+                
+                selects.forEach((s) => {
+                    if (s !== select) {
+                        const options = s.querySelectorAll('option');
+                        options.forEach((option) => {
+                            const value = option.value;
+                            if (value && value !== s.value && values.includes(value)) {
+                                option.disabled = true;
+                            } else {
+                                option.disabled = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    });
+}
+
+
+DisOp('.FP21');
+DisOp('.FP22');
+DisOp('.FP23');
+DisOp('.FP24');
+DisOp('.FP25');
+DisOp('.FP26');
+DisOp('.FP27');
+
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-1.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-3.html';}
+
+<!--------------------------------------------------------------------->
+
+// อื่น ๆ ระบุ...
+
+function Others(fieldId) {
+    var field = document.getElementById(fieldId);
+    var others = document.getElementById(fieldId + "T");
+    var shouldShowOthers = {
+        "BT23": "1"
+    };
+
+    if (shouldShowOthers[fieldId] && field.value === shouldShowOthers[fieldId]) {
+        others.style.display = "block";
+        others.value = "";
+    } else {
+        others.style.display = "none";
+    }
+}
+
+<!--------------------------------------------------------------------->
+
+    function Custom(inputId1, inputId2, customValue, divId) {
+        var input1 = parseInt(document.getElementById(inputId1).value);
+        var input2 = parseInt(document.getElementById(inputId2).value);
+        var div = document.getElementById(divId);
+
+        if (input1 === customValue || input2 === customValue) {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+    function NotEmpty(inputId, divId) {
+        var input = document.getElementById(inputId);
+        var div = document.getElementById(divId);
+
+        if (input.value !== '') {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+function allF() {
+
+	Custom('FP07_2', 'FP08_2', 1, 'FP21_1');
+	Custom('FP07_3', 'FP08_3', 1, 'FP22_1');
+	Custom('FP07_3', 'FP08_3', 1, 'FP23_1');
+	Custom('FP07_4', 'FP08_4', 1, 'FP24_1');
+	Custom('FP07_4', 'FP08_4', 1, 'FP25_1');
+	Custom('FP07_5', 'FP08_5', 1, 'FP26_1');
+	Custom('FP07_5', 'FP08_5', 1, 'FP27_1');
+    
+	NotEmpty('FP21_1', 'FP21_2');
+	NotEmpty('FP21_2', 'FP21_3');
+    
+	NotEmpty('FP22_1', 'FP22_2');
+	NotEmpty('FP22_2', 'FP22_3');
+    
+	NotEmpty('FP23_1', 'FP23_2');
+	NotEmpty('FP23_2', 'FP23_3');
+    
+	NotEmpty('FP24_1', 'FP24_2');
+	NotEmpty('FP24_2', 'FP24_3');
+    
+	NotEmpty('FP25_1', 'FP25_2');
+	NotEmpty('FP25_2', 'FP25_3');
+    
+	NotEmpty('FP26_1', 'FP26_2');
+	NotEmpty('FP26_2', 'FP26_3');
+    
+	NotEmpty('FP27_1', 'FP27_2');
+	NotEmpty('FP27_2', 'FP27_3');
+}
+
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+	var inputIds = Array.from(elements).map(function(element) {
+    return element.id;
+});
+
+window.onload = function() {
+    inputIds.forEach(function(id) {
+        var inputField = document.getElementById(id);
+        inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            allF();
+        });
+
+        var value = localStorage.getItem(id);
+        if (value !== null) {
+            inputField.value = value;
+        } else {
+            inputField.value = "";
+        }
+    });
+
+    saveToLocalStorage();
+    allF();
+};
+
+<!--------------------------------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+    display: flex;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .frame, .frame2 {
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  select, input {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;  
+    height: 35px;
+    width: 120px;
+    font-size: 16px;   
+  }
+  select.S {
+    width: 180px;
+  }
+  input.etc {
+    margin-top: 15px;
+  }
+  input.G {
+    width: 80px;
+    text-align: center;
+    background-color: #F3F3F3;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  input[type="radio"] {
+    height: 13px;
+    width: 13px; 
+  }
+  input[type="checkbox"] {
+    height: 13px;
+    width: 13px; 
+  }
+    
+    /*--------------------------------*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 60px;
+        font-size: 16px;
+    }
+    table th, table td {
+        border: 1px solid #C8DAF0;
+        padding: 10px;
+        text-align: left;
+    }
+    table th {
+    	font-weight: normal;
+        background-color: #E7F5FF;
+        text-align: center;
+    }
+    table td {
+        padding: 15px;
+    	font-weight: normal;
+        text-align: center;
+    	vertical-align: top;
+    }
+    thead {
+        position: sticky;
+        top: 0;
+        background: #eee;
+    }
+   #gray {
+        background-color: #f8f6fa;
+    }
+    
+    /*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 40px;
+  }
+  .nn2 {
+    padding-left: 20px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .gray {
+    color: #00B050;
+    font-size: 12px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 2 : การส่งเสริมการให้บริการทางการเงินอย่างกว้างขวางและทั่วถึง</b>
+</div>
+
+<div class="head0"><b>หมวด ก. การเข้าถึงบริการทางการเงิน</b></div>
+<div class="head"><b>ในการไปใช้บริการดังต่อไปนี้ ท่านเคยประสบปัญหาต่าง ๆ กับผู้ให้บริการ<u>ในระบบ</u>รายใด โดยตอบได้มากที่สุด 2 ราย ให้บันทึกตามผู้ให้บริการที่พบปัญหามากที่สุด</b></div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 16 (การ์ดตัวเลือก)</b>
+  </div>
+
+<!--------------------------------------------- FP01 --------------------------------------------->
+
+<table id="table">
+    <thead>
+      <tr>
+        <th style="min-width: 210px;"><b>ประเภทบริการ</b></th>
+        <th style="min-width: 150px;"><b>ท่านเคยประสบ<br>ปัญหาการใช้บริการ<br>ในระบบหรือไม่</b></th>
+        <th style="min-width: 150px;"><b>ระบุผู้ให้บริการ<br><u>ในระบบ</u><br>ที่พบปัญหามากที่สุด</b></th>
+        <th style="min-width: 380px;"><b>ปัญหา (ตอบได้มากกว่า 1 ปัญหา)</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be added here by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    const formItems = [
+        {
+            title: "บัญชีเงินฝากเพื่อการออม",
+            id: "FP08_2", i:'2',
+            selectId: "FP09",
+            sources: [
+                { selectId: "FP10", checkboxes: ["FP10_1", "FP10_2", "FP10_3", "FP10_4", "FP10_5"] },
+                { selectId: "FP11", checkboxes: ["FP11_1", "FP11_2", "FP11_3", "FP11_4", "FP11_5"] }
+            ]
+        },
+        {
+            title: "โอนเงิน",
+            id: "FP08_3", i:'3',
+            selectId: "FP12",
+            sources: [
+                { selectId: "FP13", checkboxes: ["FP13_1", "FP13_2", "FP13_3", "FP13_4", "FP13_5"] },
+                { selectId: "FP14", checkboxes: ["FP14_1", "FP14_2", "FP14_3", "FP14_4", "FP14_5"] }
+            ]
+        },
+        {
+            title: "ชำระเงิน (รวมชำระหนี้)",
+            id: "FP08_4", i:'4',
+            selectId: "FP15",
+            sources: [
+                { selectId: "FP16", checkboxes: ["FP16_1", "FP16_2", "FP16_3", "FP16_4", "FP16_5"] },
+                { selectId: "FP17", checkboxes: ["FP17_1", "FP17_2", "FP17_3", "FP17_4", "FP17_5"] }
+            ]
+        },
+        {
+            title: "สินเชื่อ (ไม่รวมบัตรเครดิต)",
+            id: "FP08_5", i:'5',
+            selectId: "FP18",
+            sources: [
+                { selectId: "FP19", checkboxes: ["FP19_1", "FP19_2", "FP19_3", "FP19_4", "FP19_5"] },
+                { selectId: "FP20", checkboxes: ["FP20_1", "FP20_2", "FP20_3", "FP20_4", "FP20_5"] }
+            ]
+        }
+    ];
+
+    function createFormRow(item) {
+        let row = `
+            <tr>
+                <td rowspan="2">
+                    ${item.title}<br><br>
+                    ${item.id}<br><br>
+                    <input class="G" type="text" id="${item.id}">
+                </td>
+                <td rowspan="2">
+                    <select id="${item.selectId}">
+                        <option value="">-- กรุณาเลือก --</option>
+                        <option value="0">0 - ไม่เคย</option>
+                        <option value="1">1 - เคย</option>
+                    </select>
+                </td>
+        `;
+
+        item.sources.forEach((source, index) => {
+            row += `
+                <td style="text-align: left;">
+                    แหล่งที่ ${index + 1} :<br><br>
+                    <select id="${source.selectId}">
+                        <option value="">-- กรุณาเลือก --</option>
+                        <option value="1">FP02_${item.i}</option>
+                        <option value="2">FP03_${item.i}</option>
+                        <option value="3">FP04_${item.i}</option>
+                        <option value="4">FP05_${item.i}</option>
+                        <option value="5">FP06_${item.i}</option>
+                    </select>
+                </td>
+                <td style="text-align: left;">
+            `;
+
+            source.checkboxes.forEach(checkbox => {
+                row += `
+                    <input type="checkbox" id="${checkbox}">
+                    <label for="${checkbox}">${getCheckboxLabel(checkbox)}</label><br><br>
+                `;
+            });
+
+            row += `
+                    </td></tr><tr>`;
+        });
+
+        row += `</tr>`;
+        return row;
+    }
+
+    function getCheckboxLabel(id) {
+        switch(id) {
+            case "FP10_1":
+            case "FP11_1":
+            case "FP13_1":
+            case "FP14_1":
+            case "FP16_1":
+            case "FP17_1":
+            case "FP19_1":
+            case "FP20_1":
+                return "อัตราดอกเบี้ย/ค่าธรรมเนียมที่กำหนดไม่เหมาะสม";
+            case "FP10_2":
+            case "FP11_2":
+            case "FP13_2":
+            case "FP14_2":
+            case "FP16_2":
+            case "FP17_2":
+            case "FP19_2":
+            case "FP20_2":
+                return "เงื่อนไข/ขั้นตอนการใช้บริการมีความยุ่งยาก";
+            case "FP10_3":
+            case "FP11_3":
+            case "FP13_3":
+            case "FP14_3":
+            case "FP16_3":
+            case "FP17_3":
+            case "FP19_3":
+            case "FP20_3":
+                return "ระยะทางไกล/จุดให้บริการน้อย";
+            case "FP10_4":
+            case "FP11_4":
+            case "FP13_4":
+            case "FP14_4":
+            case "FP16_4":
+            case "FP17_4":
+            case "FP19_4":
+            case "FP20_4":
+                return "ระบบหรือแอปพลิเคชันซับซ้อนใช้งานยาก";
+            case "FP10_5":
+            case "FP11_5":
+            case "FP13_5":
+            case "FP14_5":
+            case "FP16_5":
+            case "FP17_5":
+            case "FP19_5":
+            case "FP20_5":
+                return "ไม่ได้รับความเป็นธรรม/ถูกเอารัดเอาเปรียบ/ถูกหลอก";
+            default:
+                return "";
+        }
+    }
+
+    const tableBody = document.querySelector('#table tbody');
+    formItems.forEach(item => {
+        tableBody.innerHTML += createFormRow(item);
+    });
+</script>
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-2.html';}
+
+<!--------------------------------------------------------------------->
+
+function checkDisability(input) {
+        var selectElement = document.getElementById(input);
+        var selectedValue = selectElement.value;
+        var message = document.createElement('div');
+        
+        if (selectedValue === ".") {
+        	alert('กรุณาเลือกคำตอบ');
+            message.textContent = ('กรุณาเลือกคำตอบ');
+            message.style.color = "red";
+            var selectDiv = selectElement.parentElement;
+            selectDiv.appendChild(message);
+            setTimeout(function() {
+                message.remove();
+            }, 3000);
+            selectElement.value = "";
+        }
+}
+
+<!--------------------------------------------------------------------->
+
+    function FP08() {
+        const ids = ['FP08_2', 'FP08_3', 'FP08_4', 'FP08_5'];
+        const selectIds = ['FP09', 'FP12', 'FP15', 'FP18'];
+
+        ids.forEach((inputId, index) => {
+            const input = document.getElementById(inputId);
+            const select = document.getElementById(selectIds[index]);
+            const inputValue = parseInt(input.value);
+
+            if (inputValue === 0 || inputValue === 2) {
+                select.disabled = false;
+                select.style.backgroundColor = '';
+            } else {
+                select.disabled = true;
+                select.style.backgroundColor = '#EEEEEE';
+                select.value = '';
+            }
+        });
+    }
+
+<!--------------------------------------------------------------------->
+
+    function Custom(inputId, customValue, divId) {
+        var input = document.getElementById(inputId);
+        var inputValue = parseInt(input.value); 
+        var div = document.getElementById(divId);
+
+        if (inputValue === customValue) {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+    function NotEmpty(inputId, divId) {
+        var input = document.getElementById(inputId);
+        var div = document.getElementById(divId);
+
+        if (input.value !== '') {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+function allF() {
+    FP08();
+
+    const customPairs = [
+        ['FP09', 1, 'FP10'],
+        ['FP09', 1, 'FP11'],
+        ['FP12', 1, 'FP13'],
+        ['FP12', 1, 'FP14'],
+        ['FP15', 1, 'FP16'],
+        ['FP15', 1, 'FP17'],
+        ['FP18', 1, 'FP19'],
+        ['FP18', 1, 'FP20']
+    ];
+
+    customPairs.forEach(pair => {
+        Custom(pair[0], pair[1], pair[2]);
+    });
+    
+    
+    NotEmpty('FP10', 'FP11');
+    NotEmpty('FP13', 'FP14');
+    NotEmpty('FP16', 'FP17');
+    NotEmpty('FP19', 'FP20');
+
+    const notEmptyPairs = [
+        ['FP10', ['FP10_1', 'FP10_2', 'FP10_3', 'FP10_4', 'FP10_5']],
+        ['FP11', ['FP11_1', 'FP11_2', 'FP11_3', 'FP11_4', 'FP11_5']],
+        ['FP13', ['FP13_1', 'FP13_2', 'FP13_3', 'FP13_4', 'FP13_5']],
+        ['FP14', ['FP14_1', 'FP14_2', 'FP14_3', 'FP14_4', 'FP14_5']],
+        ['FP16', ['FP16_1', 'FP16_2', 'FP16_3', 'FP16_4', 'FP16_5']],
+        ['FP17', ['FP17_1', 'FP17_2', 'FP17_3', 'FP17_4', 'FP17_5']],
+        ['FP19', ['FP19_1', 'FP19_2', 'FP19_3', 'FP19_4', 'FP19_5']],
+        ['FP20', ['FP20_1', 'FP20_2', 'FP20_3', 'FP20_4', 'FP20_5']]
+    ];
+
+    notEmptyPairs.forEach(pair => {
+        pair[1].forEach(id => {
+            NotEmpty(pair[0], id);
+        });
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+
+<!------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!------------------------------------------->
+
+function getLocalStorage() {
+	document.getElementById('BT46').value = parseInt(localStorage.getItem("AE00"));
+}
+
+<!------------------------------------------->
+
+    window.onload = function() {
+        inputIds.forEach(function(id) {
+            var inputField = document.getElementById(id);
+            inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            allF();
+            });
+
+            var value = localStorage.getItem(id);
+            if (value !== null) {
+                inputField.value = value;
+            } else {
+                inputField.value = "";
+            }
+        });
+        saveToLocalStorage();
+        allF();
+        
+        
+    };
+
+<!------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,724 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .head3 {
+    background-color: #EFF1FF;
+    padding: 15px;
+    padding-left: 80px;
+    font-size: 16px;
+  }
+  .frame, .frame2, .frame3 {
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  .frame3 {
+    padding-left: 110px;
+  }
+  select, input {
+    height: 35px;
+    width: 250px;
+    font-size: 16px;   
+  }
+  .etc {
+    margin-left: 75px;
+  }
+  input.G, select.G{
+    /*border-radius: 4px;*/
+    border: 1px solid #ddd;
+    box-sizing: border-box;  
+    width: 80px;
+    text-align: center;
+    background-color: #F3F3F3;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  
+/*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 20px;
+  }
+  .nn2 {
+    padding-left: 40px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .gray {
+    color: #00B050;
+    font-size: 12px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 2 : การส่งเสริมการให้บริการทางการเงินอย่างกว้างขวางและทั่วถึง</b>
+</div>
+
+<div class="head0"><b>หมวด ข. การตัดสินใจเลือกใช้บริการทางการเงิน และช่องทางการเข้าถึงบริการทางการเงิน (ต่อ)</b></div>
+
+<!--------------------------------------------- FP39 --------------------------------------------->
+
+  <div class="head">
+      <b>บริการทางการเงิน (รวม ทุกบริการ) ผ่านช่องทางอิเล็กทรอนิกส์</b>
+  </div>
+
+  <div class="head2">
+      <b>FP39 : ท่านใช้บริการทางการเงินผ่านช่องทางอิเล็กทรอนิกส์ (ตามนิยาม e-Payment) หรือไม่</b>
+  </div>
+
+  <div class="nn2">
+      e-Payment คือ การโอนเงิน/ชำระเงินด้วยสื่อการชำระเงินต่าง ๆ (ยกเว้น เงินสด และเช็ค) เช่น การโอน/ชำระเงินด้วยธนาคารทางอินเทอร์เน็ต (Internet banking)
+  </div>
+  
+  <div class="frame2">
+      <select id="FP39">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่ใช้</option>
+          <option value="1">1 - ใช้</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- FP40 --------------------------------------------->
+
+<div id="FP4041Div">
+<div id="FP40Div">
+  <div class="head2">
+      <b>FP40 : เมื่อเทียบกับการชำระเงินทั้งหมด ท่านมีการชำระเงินผ่านช่องทางอิเล็กทรอนิกส์เป็นร้อยละเท่าไร</b>
+  </div>
+  
+  <div class="frame2">
+      <input id="FP40" type="text">
+  </div>
+</div>
+  
+<!--------------------------------------------- FP41 --------------------------------------------->
+
+<div id="FP41Div">
+  <div class="head2">
+      <b>FP41 : เหตุผลที่ท่าน <u>ใช้</u> การชำระเงินผ่านช่องทางอิเล็กทรอนิกส์</b>
+  </div>
+
+  <div class="nn2">
+      <b>แสดงการ์ดที่ 26 (การ์ดตัวเลือก)</b><br>
+      ตอบได้ไม่เกิน 3 ลำดับ โดยเรียงตามลำดับความสำคัญ
+  </div>
+  
+  <div class="frame2">
+  
+    ลำดับที่ 1 :
+    <select id="FP41_1" class="FP41">
+        <option value="">-- กรุณาเลือก --</option>
+        <option value="1">1 - ง่าย/สะดวก/รวดเร็ว/ทำธุรกรรมได้ทุกที่ทุกเวลา</option>
+        <option value="2">2 - ค่าธรรมเนียมถูก</option>
+        <option value="3">3 - ได้รับสิทธิประโยชน์ (เช่น ส่วนลด)</option>
+        <option value="4">4 - มีความปลอดภัย</option>
+        <option value="5">5 - อื่น ๆ (ระบุ)</option>
+    </select><br><br>
+    ลำดับที่ 2 :
+    <select id="FP41_2" class="FP41">
+        <option value="">-- กรุณาเลือก --</option>
+        <option value="1">1 - ง่าย/สะดวก/รวดเร็ว/ทำธุรกรรมได้ทุกที่ทุกเวลา</option>
+        <option value="2">2 - ค่าธรรมเนียมถูก</option>
+        <option value="3">3 - ได้รับสิทธิประโยชน์ (เช่น ส่วนลด)</option>
+        <option value="4">4 - มีความปลอดภัย</option>
+        <option value="5">5 - อื่น ๆ (ระบุ)</option>
+    </select><br><br>
+    ลำดับที่ 3 :
+    <select id="FP41_3" class="FP41">
+        <option value="">-- กรุณาเลือก --</option>
+        <option value="1">1 - ง่าย/สะดวก/รวดเร็ว/ทำธุรกรรมได้ทุกที่ทุกเวลา</option>
+        <option value="2">2 - ค่าธรรมเนียมถูก</option>
+        <option value="3">3 - ได้รับสิทธิประโยชน์ (เช่น ส่วนลด)</option>
+        <option value="4">4 - มีความปลอดภัย</option>
+        <option value="5">5 - อื่น ๆ (ระบุ)</option>
+    </select><br><br><br>
+
+    <div class="etc" id="FP41TDiv" style="display: none;">
+        <input id="FP41_T" type="text" placeholder="ระบุเหตุผลอื่น ๆ"> 
+    </div>
+  </div>
+
+</div>
+</div>
+  
+<!--------------------------------------------- FP42 --------------------------------------------->
+
+<div id="FP42Div">
+  <div class="head2">
+      <b>FP42 : เหตุผลที่ท่าน <u>ไม่ใช้</u> การชำระเงินผ่านช่องทางอิเล็กทรอนิกส์</b>
+  </div>
+
+  <div class="nn2">
+      <b>แสดงการ์ดที่ 27 (การ์ดตัวเลือก)</b><br>
+      ตอบได้ไม่เกิน 3 ลำดับ โดยเรียงตามลำดับความสำคัญ
+  </div>
+  
+  <div class="frame2">
+      ลำดับที่ 1 :
+      <select id="FP42_1" class="FP42">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ใช้ไม่เป็น</option>
+          <option value="2">2 - ไม่มีอุปกรณ์ (เช่น โทรศัพท์มือถือ คอมพิวเตอร์)</option>
+          <option value="3">3 - กังวลเรื่องความปลอดภัย</option>
+          <option value="4">4 - ใช้เงินสดสะดวกกว่า</option>
+          <option value="5">5 - ไม่มีจุดรับบริการ/ร้านค้าไม่รับชำระ</option>
+          <option value="6">6 - ไม่มีความจำเป็นต้องใช้</option>
+          <option value="7">7 - ไม่ทราบว่าสามารถโอนเงิน/ชำระเงินออนไลน์ได้</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+      ลำดับที่ 2 :
+      <select id="FP42_2" class="FP42">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ใช้ไม่เป็น</option>
+          <option value="2">2 - ไม่มีอุปกรณ์ (เช่น โทรศัพท์มือถือ คอมพิวเตอร์)</option>
+          <option value="3">3 - กังวลเรื่องความปลอดภัย</option>
+          <option value="4">4 - ใช้เงินสดสะดวกกว่า</option>
+          <option value="5">5 - ไม่มีจุดรับบริการ/ร้านค้าไม่รับชำระ</option>
+          <option value="6">6 - ไม่มีความจำเป็นต้องใช้</option>
+          <option value="7">7 - ไม่ทราบว่าสามารถโอนเงิน/ชำระเงินออนไลน์ได้</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+      ลำดับที่ 3 :
+      <select id="FP42_3" class="FP42">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ใช้ไม่เป็น</option>
+          <option value="2">2 - ไม่มีอุปกรณ์ (เช่น โทรศัพท์มือถือ คอมพิวเตอร์)</option>
+          <option value="3">3 - กังวลเรื่องความปลอดภัย</option>
+          <option value="4">4 - ใช้เงินสดสะดวกกว่า</option>
+          <option value="5">5 - ไม่มีจุดรับบริการ/ร้านค้าไม่รับชำระ</option>
+          <option value="6">6 - ไม่มีความจำเป็นต้องใช้</option>
+          <option value="7">7 - ไม่ทราบว่าสามารถโอนเงิน/ชำระเงินออนไลน์ได้</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br><br>
+                    
+      <div class="etc" id="FP42TDiv">
+          <input id="FP42_T" type="text" placeholder="ระบุเหตุผลอื่น ๆ">      
+      </div>
+  </div>
+</div>
+  
+<!--------------------------------------------- FP43 --------------------------------------------->
+
+<div id="FP43Div">
+  <div class="head">
+  	  <span style="color: #ff0000;"><b>*</b></span>
+      <b>FP43 : <u>ก่อนที่ท่านจะตัดสินใจเลือกใช้บริการทางการเงิน</u> ในผลิตภัณฑ์ทางการเงิน ในทุก ๆ ประเภท (เช่น เงินฝาก สินเชื่อ บัตรเครดิต ฯลฯ) ท่านได้เปรียบเทียบผลิตภัณฑ์นั้น ๆ <u>จากผู้ให้บริการหลายแห่ง หรือไม่</u></b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 28 (การ์ดตัวเลือก)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="FP43">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่ได้ใช้บริการทางการเงิน</option>
+          <option value="1">1 - ไม่ได้เปรียบเทียบ (ไม่สนใจเปรียบเทียบ)</option>
+          <option value="2">2 -  ได้เปรียบเทียบจากหลายแห่งก่อนตัดสินใจ</option>
+          <option value=".">ตัดสินใจเลือกจากผู้ให้บริการเพียงรายเดียว เนื่องจาก</option>
+          <option value="3">3 - ไม่ต้องการใช้ผลิตภัณฑ์ของผู้ให้บริการรายอื่น</option>
+          <option value="4">4 - พยายามสืบค้นข้อมูลจากผู้ให้บริการรายอื่นแล้ว แต่ไม่มีผลิตภัณฑ์ที่เหมือนกัน/คล้ายกัน ให้เปรียบเทียบด้วย</option>
+      </select>
+  </div>
+</div>
+  
+<!--------------------------------------------- FP44 --------------------------------------------->
+
+<div id="FP4450Div">
+
+  <div class="head">
+      <b>โปรดระบุแหล่งข้อมูลที่มีอิทธิพล หรือมีผลต่อการตัดสินใจของท่าน ในการเลือกใช้ผลิตภัณฑ์/บริการทางการเงิน</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 29 (การ์ดคำถาม)</b>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP44 : ข้อมูลเฉพาะ/เปรียบเทียบผลิตภัณฑ์จาก นิตยสารเฉพาะ หรือเว็บไซต์เปรียบเทียบราคา</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP44">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP45 : คำแนะนำจากที่ปรึกษาทางการเงินอิสระ หรือผู้เชี่ยวชาญทางการเงิน หรือนักวางแผนการเงิน</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP45">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP46 : ข้อมูลจากโฆษณา หรือ โบรชัวร์แนะนำผลิตภัณฑ์</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP46">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP47 : คำแนะนำจากครอบครัว หรือเพื่อน</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP47">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP48 : คำแนะนำจากคนอื่น เช่น สื่อสังคมออนไลน์ (social media) หรือ อินฟลูเอนเซอร์ </b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP48">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP49 : ข้อมูลที่ได้รับแจ้งจากพนักงานธนาคารโดยตรง ออนไลน์ หรือทางโทรศัพท์</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP49">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------------------------------------->
+  
+  <div class="head2">
+      <b>FP50 : อื่น ๆ (ระบุ)</b>
+  </div>
+  
+  <div class="frame2">
+      <select id="FP50">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่มีอิทธิพล</option>
+          <option value="1">1 - มีอิทธิพล</option>
+      </select><br><br>
+                    
+      <div class="etc" id="FP50TDiv" style="margin-left: 0px;">
+          <input id="FP50_T" type="text" placeholder="ระบุแหล่งอื่น ๆ">
+          <span class="gray">(FP50_T)</span>   
+      </div>
+  </div>
+  
+</div>
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+function DisOp(className) {
+    document.addEventListener("DOMContentLoaded", function() {
+        const selects = document.querySelectorAll(className);
+        
+        selects.forEach((select) => {
+            select.addEventListener('change', () => {
+                const values = Array.from(selects).map((s) => s.value);
+                
+                selects.forEach((s) => {
+                    if (s !== select) {
+                        const options = s.querySelectorAll('option');
+                        options.forEach((option) => {
+                            const value = option.value;
+                            if (value && value !== s.value && values.includes(value)) {
+                                option.disabled = true;
+                            } else {
+                                option.disabled = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    });
+}
+
+
+DisOp('.FP41');
+DisOp('.FP42');
+
+
+
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-4.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function checkDisability(input) {
+        var selectElement = document.getElementById(input);
+        var selectedValue = selectElement.value;
+        var message = document.createElement('div');
+        
+        if (selectedValue === ".") {
+        	alert('กรุณาเลือกคำตอบ');
+            message.textContent = ('กรุณาเลือกคำตอบ');
+            message.style.color = "red";
+            var selectDiv = selectElement.parentElement;
+            selectDiv.appendChild(message);
+            setTimeout(function() {
+                message.remove();
+            }, 3000);
+            selectElement.value = "";
+        }
+}
+
+<!--------------------------------------------------------------------->
+
+function UnHide(inputId, customValue, divId) {
+    var input = document.getElementById(inputId);
+    var div = document.getElementById(divId);
+
+    var inputValue = parseInt(input.value); // Always parse as integer for comparison
+
+    var ReIDStr = divId.slice(0, -3);
+    var ReID = document.getElementById(ReIDStr);
+
+    if (!ReID) {
+        console.error('Element with ReID not found:', ReIDStr);
+        return;
+    }
+
+    console.log('Input Value:', inputValue);
+    console.log('ReID:', ReID);
+
+    if (inputValue === customValue) {
+        div.style.display = 'block';
+    } else {
+        div.style.display = 'none';
+        ReID.value = '';
+    }
+}
+
+<!--------------------------------------------------------------------->
+
+    function NotEmpty(inputId, divId) {
+        var input = document.getElementById(inputId);
+        var div = document.getElementById(divId);
+
+        if (input.value !== '') {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+
+<!--------------------------------------------------------------------->
+
+function Others(fieldId, customValue) {
+    var field1 = document.getElementById(fieldId + "_1").value;
+    var field2 = document.getElementById(fieldId + "_2").value;
+    var field3 = document.getElementById(fieldId + "_3").value;
+    var othersD = document.getElementById(fieldId + "TDiv");
+    var othersV = document.getElementById(fieldId + "_T");
+
+    if (field1 === customValue || field2 === customValue || field3 === customValue) {
+        othersD.style.display = "block";
+    } else {
+        othersD.style.display = "none";
+        othersV.value = "";
+    }
+}
+
+<!--------------------------------------------------------------------->
+
+function CC() {
+    for (var i = 1; i <= 11; i++) {
+        if (parseInt(localStorage.getItem('FP01_' + i)) !== 0) {
+            return;
+        }
+    }
+    
+    document.getElementById('FP43').value = '0';
+}
+
+<!--------------------------------------------------------------------->
+
+function FP39() {
+    var fp39 = document.getElementById('FP39').value;
+    var FP4041Div = document.getElementById('FP4041Div');
+    var FP42Div = document.getElementById('FP42Div');
+
+    FP4041Div.style.display = fp39 === '0' ? 'none' : 'block';
+    FP42Div.style.display = fp39 === '1' ? 'none' : 'block';
+
+    if (fp39 === '0') {
+        clearFields(['FP40', 'FP41_1', 'FP41_2', 'FP41_3', 'FP41_T']);
+    } else if (fp39 === '1') {
+        clearFields(['FP42_1', 'FP42_2', 'FP42_3', 'FP42_T']);
+    }
+}
+
+<!--------------------------------------------------->
+
+function FP43() {
+    var field = document.getElementById('FP43').value;
+    var FP4450Div = document.getElementById("FP4450Div");
+
+    FP4450Div.style.display = field === '0' ? 'none' : 'block';
+
+    if (field === '0') {
+        clearFields(['FP44', 'FP45', 'FP46', 'FP47', 'FP48', 'FP49', 'FP50', 'FP50_T']);
+    }
+}
+
+<!--------------------------------------------------->
+
+function Others50() {
+    var field = document.getElementById('FP50').value;
+    var othersD = document.getElementById("FP50TDiv");
+    var othersV = document.getElementById("FP50_T");
+
+    othersD.style.display = field === '1' ? 'block' : 'none';
+    othersV.value = field !== '1' ? '' : othersV.value;
+}
+
+<!--------------------------------------------------->
+
+function clearFields(ids) {
+    ids.forEach(function(id) {
+        document.getElementById(id).value = '';
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+function allF() {
+
+	FP39();
+    
+    Others('FP41', '5');
+    NotEmpty('FP41_1', 'FP41_2');
+    NotEmpty('FP41_2', 'FP41_3');
+    
+    Others('FP42', '8');
+    NotEmpty('FP42_1', 'FP42_2');
+    NotEmpty('FP42_2', 'FP42_3');
+    
+    CC();
+    
+    checkDisability('FP43');
+    FP43();
+    Others50();
+}
+
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+
+<!------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!------------------------------------------->
+
+function getLocalStorage() {
+
+}
+
+<!------------------------------------------->
+
+    window.onload = function() {
+    
+        inputIds.forEach(function(id) {
+            var inputField = document.getElementById(id);
+            inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            allF();
+            });
+
+            var value = localStorage.getItem(id);
+            if (value !== null) {
+                inputField.value = value;
+            } else {
+                inputField.value = "";
+            }
+        });
+        saveToLocalStorage();
+        allF();
+        
+    };
+
+<!------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+</script>
+
+</body>
+</html>

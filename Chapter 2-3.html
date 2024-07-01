@@ -1,0 +1,426 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .frame, .frame2 {
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  select, input {
+    height: 35px;
+    width: 250px;
+    font-size: 16px;   
+  }
+  input.etc {
+    margin-top: 15px;
+  }
+  input.G, select.G{
+    border: 0.5px solid #000; 
+    background-color: #EEEEEE;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  
+/*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 20px;
+  }
+  .nn2 {
+    padding-left: 30px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .gray {
+    color: #00B050;
+    font-size: 12px;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 2 : การส่งเสริมการให้บริการทางการเงินอย่างกว้างขวางและทั่วถึง</b>
+</div>
+
+<div class="head0"><b>หมวด ก. การเข้าถึงบริการทางการเงิน</b></div>
+
+<!------------------------------------------------------------------------------------------>
+
+  <div class="head">
+      <b>FP28 - FP30 : เหตุผลสำคัญที่ทำให้ท่านกู้เงิน<u>นอกระบบ</u> (แทนการกู้เงินจากสถาบันการเงินในระบบ)</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 21 (การ์ดตัวเลือก)</b><br>
+      ตอบได้ไม่เกิน 3 ลำดับ โดยเรียงตามลำดับความสำคัญ
+  </div>
+  
+  <div class="frame">
+  ลำดับที่ 1 :
+      <select id="FP28" class="FP2830">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - มีความจำเป็นต้องใช้เงินแบบเร่งด่วน</option>
+          <option value="2">2 - ไม่ต้องมีหลักประกัน</option>
+          <option value="3">3 - ไม่ต้องใช้เอกสารแสดงฐานะการเงิน</option>
+          <option value="4">4 - เงื่อนไขในการผ่อนชำระตรงกับความต้องการ</option>
+          <option value="5">5 - ถูกปฏิเสธสินเชื่อในระบบ</option>
+          <option value="6">6 - ไม่รู้จัก/ไม่กล้าไปขอกู้จากสถาบันการเงินในระบบ</option>
+          <option value="7">7 - รู้จักกัน/ถูกชักชวน</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+  ลำดับที่ 2 :
+      <select id="FP29" class="FP2830">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - มีความจำเป็นต้องใช้เงินแบบเร่งด่วน</option>
+          <option value="2">2 - ไม่ต้องมีหลักประกัน</option>
+          <option value="3">3 - ไม่ต้องใช้เอกสารแสดงฐานะการเงิน</option>
+          <option value="4">4 - เงื่อนไขในการผ่อนชำระตรงกับความต้องการ</option>
+          <option value="5">5 - ถูกปฏิเสธสินเชื่อในระบบ</option>
+          <option value="6">6 - ไม่รู้จัก/ไม่กล้าไปขอกู้จากสถาบันการเงินในระบบ</option>
+          <option value="7">7 - รู้จักกัน/ถูกชักชวน</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+  ลำดับที่ 3 :
+      <select id="FP30" class="FP2830">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - มีความจำเป็นต้องใช้เงินแบบเร่งด่วน</option>
+          <option value="2">2 - ไม่ต้องมีหลักประกัน</option>
+          <option value="3">3 - ไม่ต้องใช้เอกสารแสดงฐานะการเงิน</option>
+          <option value="4">4 - เงื่อนไขในการผ่อนชำระตรงกับความต้องการ</option>
+          <option value="5">5 - ถูกปฏิเสธสินเชื่อในระบบ</option>
+          <option value="6">6 - ไม่รู้จัก/ไม่กล้าไปขอกู้จากสถาบันการเงินในระบบ</option>
+          <option value="7">7 - รู้จักกัน/ถูกชักชวน</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+      
+      <div id="FP2830T" style="margin-left: 75px;">
+          <input id="FP2830_T" class="etc" type="text" placeholder="ระบุ">
+      </div>
+  </div>
+
+<!------------------------------------------------------------------------------------------>
+
+  <div class="head">
+      <b>FP31 : <u>ในรอบ 12 เดือนที่ผ่านมา</u> ส่วนใหญ่ท่านกู้เงินนอกระบบมาเพื่อวัตถุประสงค์อะไร</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 22 (การ์ดตัวเลือก)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="FP31">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ซื้อสินค้าอุปโภคบริโภคที่จำเป็น เช่น อาหาร</option>
+          <option value="2">2 - ซื้อสินค้าอุปโภคบริโภคอื่น ๆ  เช่น กระเป๋า นาฬิกา</option>
+          <option value="3">3 - ประกอบธุรกิจ/ค้าขาย</option>
+          <option value="4">4 - ค่าสาธารณูปโภค เช่น ค่าน้ำ ค่าไฟ ค่าโทรศัพท์</option>
+          <option value="5">5 - ค่ารักษาพยาบาล</option>
+          <option value="6">6 - ชำระหนี้ในระบบ (หนี้ค้ำประกันที่ถูกบังคับคดี หนี้บัตรเครดิต หนี้บ้าน/รถยนต์)</option>
+          <option value="7">7 - ชำระหนี้นอกระบบ (หมุนเงิน)</option>
+          <option value="8">8 - อื่น ๆ (ระบุ)</option>
+      </select>
+      <div id="FP31TDiv">
+          <input id="FP31_T" class="etc" type="text" placeholder="ระบุ">
+      </div>
+  </div>
+
+<!------------------------------------------------------------------------------------------>
+
+  <div class="head">
+      <b>FP32 : เมื่อเทียบกับยอดหนี้ทั้งหมดในปัจจุบัน ท่านมียอดหนี้นอกระบบคิดเป็นสัดส่วน (ร้อยละ) เท่าไร</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 23 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <input id="FP32" type="text">
+  </div>
+
+<!------------------------------------------------------------------------------------------>
+
+  <div class="head">
+      <b>FP33 : <u>ในรอบ 12 เดือนที่ผ่านมา</u>  สถานการณ์การชำระหนี้นอกระบบของท่านเป็นอย่างไร</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 24 (การ์ดตัวเลือก)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="FP33">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ไม่มีปัญหา ชำระยอดได้ครบตามกำหนด/ยังไม่ถึงกำหนดชำระยอด</option>
+          <option value="2">2 - ชำระยอดได้บางส่วน แต่ยังไม่ถูกทวงถาม</option>
+          <option value="3">3 - ชำระยอดไม่ได้และถูกทวงถาม</option>
+      </select>
+  </div>
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+
+<div id="outer">
+  <div class="inner"><button onclick="back()">Back</button></div>
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+function DisOp(className) {
+    document.addEventListener("DOMContentLoaded", function() {
+        const selects = document.querySelectorAll(className);
+        
+        selects.forEach((select) => {
+            select.addEventListener('change', () => {
+                const values = Array.from(selects).map((s) => s.value);
+                
+                selects.forEach((s) => {
+                    if (s !== select) {
+                        const options = s.querySelectorAll('option');
+                        options.forEach((option) => {
+                            const value = option.value;
+                            if (value && value !== s.value && values.includes(value)) {
+                                option.disabled = true;
+                            } else {
+                                option.disabled = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    });
+}
+
+
+DisOp('.FP2830');
+<!--------------------------------------------------------------------->
+
+function back() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-2.html';}
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2-4.html';}
+
+<!--------------------------------------------------->
+
+function Others31() {
+    var field = document.getElementById('FP31').value;
+    var othersD = document.getElementById("FP31TDiv");
+    var othersV = document.getElementById("FP31_T");
+
+    othersD.style.display = field === '8' ? 'block' : 'none';
+    othersV.value = field !== '8' ? '' : othersV.value;
+}
+
+<!--------------------------------------------------------------------->
+
+function fp2830() {
+    var others = document.getElementById("FP2830_T");
+
+    if (document.getElementById('FP28').value === '8' ||
+        document.getElementById('FP29').value === '8' ||
+        document.getElementById('FP30').value === '8') {
+        
+        document.getElementById("FP2830T").style.display = "block";
+    } else {
+        document.getElementById("FP2830T").style.display = "none";
+        others.value = ""; // Clear the value of FP2830_T
+    }
+}
+
+<!--------------------------------------------------------------------->
+
+    function NotEmpty(inputId, divId) {
+        var input = document.getElementById(inputId);
+        var div = document.getElementById(divId);
+
+        if (input.value !== '') {
+            div.style.backgroundColor = '';
+            div.disabled = false;
+        } else {
+            div.style.backgroundColor = '#EEEEEE';
+            div.disabled = true;
+            div.value = '';
+        }
+    }
+    
+<!--------------------------------------------------------------------->
+    
+function allF() {
+    Others31();
+    NotEmpty('FP28', 'FP29');
+    NotEmpty('FP29', 'FP30');
+    fp2830();
+}
+
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+	var inputIds = Array.from(elements).map(function(element) {
+    return element.id;
+});
+
+window.onload = function() {
+    inputIds.forEach(function(id) {
+        var inputField = document.getElementById(id);
+        inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            allF();
+        });
+
+        var value = localStorage.getItem(id);
+        if (value !== null) {
+            inputField.value = value;
+        } else {
+            inputField.value = "";
+        }
+    });
+
+    saveToLocalStorage();
+    allF();
+};
+
+<!--------------------------------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+}
+
+</script>
+
+</body>
+</html>

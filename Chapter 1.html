@@ -1,0 +1,976 @@
+<SES pre Tablet>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOT Chapter 1</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  .bot {
+    background-color: #003366;
+    color: #fff;
+    padding: 25px;
+    text-align:center;
+    font-size: 24px;
+  }
+  .chapter {
+    background-color: #EFF1FF;
+    padding: 20px;
+    font-size: 20px;
+    text-align:center;
+  }
+  .head0 {
+    background-color: #C8DAF0;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .head {
+    background-color: #D9ECFF;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .head2 {
+    background-color: #E7F5FF;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 16px;
+  }
+  .frame, .frame2 {
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .frame {
+    padding-left: 40px;
+  }
+  .frame2 {
+    padding-left: 80px;
+  }
+  select, input {
+    height: 35px;
+    width: 250px;
+    font-size: 16px;   
+  }
+  input.etc {
+    margin-top: 15px;
+  }
+  input.G, select.G{
+    border: 0.5px solid #000; 
+    background-color: #EEEEEE;
+    color: #BFBFBF;
+    pointer-events: none;
+  }
+  
+/*--------------------------------*/
+  
+  .nn, .nn2 {
+    background-color: #FFF9E7;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .nn {
+    padding-left: 20px;
+  }
+  .nn2 {
+    padding-left: 40px;
+  }
+  .remark {
+    color: #FF0000;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  .note {    
+    font-size: 18px;
+    background-color: #E2EFDA;
+    padding: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .notebox {
+    height: 200px;    
+    font-size: 16px;
+    color: #FF0000;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    white-space: pre-line;
+    overflow-y: auto;
+  }
+  #outer{
+    width:100%;
+    text-align: center;
+  }
+.inner{
+    display: inline-block;
+  }
+	
+/*--------------------------------*/
+    
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+</style>
+</head>
+<body>
+
+<!----------------------------------------------- HEADDING ----------------------------------------------->
+
+<div class="bot"><b>การสำรวจการติดตามระดับความรู้ และการเข้าถึงบริการทางการเงินของครัวเรือน</b></div>
+
+<div class="chapter">
+    <b>ตอนที่ 1 การบริหารจัดการเงินส่วนบุคคล</b>
+</div>
+
+<!--------------------------------------------- ENUM_SKF --------------------------------------------->
+
+  <div class="head0">
+      <b>ENUM_SKF : ผลการแจงนับ</b>
+  </div>
+  
+  <div class="frame">
+      <select id="ENUM_SKF">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="01">01 - แจงนับได้</option>
+          <option value=".">แจงนับไม่ได้</option>
+          <option value="02">02 - ไปสามครั้งไม่พบ</option>
+          <option value="03">03 - ไม่ให้ความร่วมมือ</option>
+          <option value="04">04 - ไม่เข้าข่าย (ครัวเรือนที่ไม่ใช่คนไทย/ผู้ตอบสัมภาษณ์อายุต่ำกว่า 15 ปี/บุคคลนอกครัวเรือนตอบแทน)</option>
+          <option value="05">05 - อื่น ๆ (ระบุ)</option>
+      </select><br><br>
+      
+      <div id="ENUM_SKFT">
+          <input id="ENUM_SKF_T" class="etc" type="text" placeholder="ระบุ">
+      </div>
+  </div>
+  
+<div id="cont">
+
+<!--------------------------------------------- CAL --------------------------------------------->
+
+  <div class="head0">
+      <b>TEL_SKF : เบอร์โทรศัพท์ครัวเรือนตัวอย่าง</b>
+  </div>
+  
+  <div class="frame">
+      <input id="TEL_SKF" type="text">
+  </div>
+
+<div class="head0"><b>หมวด ก. การวางแผนรายรับรายจ่ายและการออม</b></div>
+
+<!--------------------------------------------- HM01_2: ลำดับที่ของผู้ตอบแบบสอบถาม --------------------------------------------->
+
+  <div class="head">
+      <b>HM01_2: ลำดับที่ของผู้ตอบแบบสอบถาม</b>
+  </div>
+  
+  <div class="frame">
+      <select id="HM01_1">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="01">01 - ชื่อ-นามสกุล</option>
+          <option value="02">02 - ชื่อ-นามสกุล</option>
+          <option value="...">...</option>
+          <option value="n">n - ชื่อ-นามสกุล</option>
+      </select>
+  </div>
+
+<!--------------------------------------------- BT01 : ท่านตัดสินใจเรื่องการใช้เงินของท่านด้วยตัวเอง --------------------------------------------->
+
+  <div class="head">
+      <b>BT01 : ท่านตัดสินใจเรื่องการใช้เงินของท่านด้วยตัวเอง</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT01">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="0">0 - ไม่ใช่</option>
+          <option value="1">1 - ใช่</option>
+      </select>
+  </div>
+
+<!--------------------------------------------- BT02 : ใครเป็นผู้รับผิดชอบและตัดสินใจเรื่องการใช้เงินในครัวเรือน --------------------------------------------->
+
+  <div class="head">
+      <b>BT02 : ใครเป็นผู้รับผิดชอบและตัดสินใจเรื่องการใช้เงินในครัวเรือน</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 1 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT02">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value="1">1 - ท่าน</option>
+          <option value="2">2 - ท่านและบุคคลอื่นในครัวเรือน เช่น คู่สมรส</option>
+          <option value="3">3 - คู่สมรสของท่าน</option>
+          <option value="4">4 - สมาชิกท่านอื่นในครัวเรือน</option>
+          <option value="5">5 - บุคคลอื่นนอกครัวเรือน</option>
+          <option value="6">6 - ไม่มี</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT03-BT10  --------------------------------------------->
+
+<div class="head"><b>ท่านมีความคิดเห็นอย่างไร กับประโยคเหล่านี้ </b></div>
+  <div class="nn">
+  	<b>แสดงการ์ดที่ 2 (การ์ดคำถาม)</b><br><br>
+  	เลือกคำตอบที่ตรงกับความคิดเห็นหรือพฤติกรรมของท่านมากที่สุด ตั้งแต่ 1 → 5 โดย<br>
+    5 : เห็นด้วยอย่างมาก, เป็นประจำ<br>
+    4 : เห็นด้วย, บ่อย ๆ<br>
+    3 : เฉย ๆ, ทำบ้างบางครั้ง<br>
+    2 : ไม่เห็นด้วย, นาน ๆ ครั้ง<br>
+    1 : ไม่เห็นด้วยอย่างมาก, ไม่เคย
+  </div>
+  
+<div id="container1"></div>
+
+    <script>
+        var components = [
+            { id: 'BT03', label: 'มีความสุขจากการใช้เงินตอนนี้ดีกว่า ไม่จำเป็นต้องเก็บออมเผื่อวันข้างหน้า' },
+            { id: 'BT04', label: 'ใช้ชีวิตเพื่อวันนี้เท่านั้น ไม่ต้องวางแผนเพื่อวันข้างหน้าก็ได้' },
+            { id: 'BT05', label: 'ท่านดูแลเรื่องเงินของตัวเองอย่างใกล้ชิด เช่น รู้ว่ามีรายได้เท่าไรและจะมีรายจ่ายเท่าไร' },
+            { id: 'BT06', label: 'ท่านตั้งเป้าเรื่องเงินไว้และพยายามจะไปให้ถึงเป้านั้นให้ได้ แม้จะต้องใช้เวลาก็ตาม' },
+            { id: 'BT07', label: 'ท่านเปลี่ยนรหัสผ่านการเข้าใช้งานระบบออนไลน์เป็นประจำ' },
+            { id: 'BT08', label: 'การใช้ระบบไวไฟ (Wi-Fi) สาธารณะเพื่อซื้อของออนไลน์เป็นสิ่งที่ปลอดภัย' },
+            { id: 'BT09', label: 'ก่อนจะซื้อของอะไร ท่านจะคิดให้ดีก่อนว่ามีเงินพอจ่ายได้' },
+            { id: 'BT10', label: 'ท่านจ่ายบิล/หนี้ต่าง ๆ เช่น ค่าน้ำ ค่าไฟ ค่าบัตรเครดิต ตรงเวลา' }
+        ];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container1');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} : ${component.label}</b>
+                    </div>
+                    <div class="frame2">
+                        <select id="${component.id}">
+                            <option value="">-- กรุณาเลือก --</option>
+                `;
+                if (component.id === 'BT03' || component.id === 'BT04' || component.id === 'BT05' || component.id === 'BT06' || component.id === 'BT07' || component.id === 'BT08') {
+                    // Options for BT03 to BT08
+                    inputsHTML += `
+                        <option value="5">5 - เห็นด้วยอย่างมาก</option>
+                        <option value="4">4 - เห็นด้วย</option>
+                        <option value="3">3 - เฉย ๆ</option>
+                        <option value="2">2 - ไม่เห็นด้วย</option>
+                        <option value="1">1 - ไม่เห็นด้วยอย่างมาก</option>
+                    `;
+                } else if (component.id === 'BT09' || component.id === 'BT10') {
+                    // Options for BT09 and BT10
+                    inputsHTML += `
+                        <option value="5">5 - เป็นประจำ</option>
+                        <option value="4">4 - บ่อย ๆ</option>
+                        <option value="3">3 - ทำบ้างบางครั้ง</option>
+                        <option value="2">2 - นาน ๆ ครั้ง</option>
+                        <option value="1">1 - ไม่เคย</option>
+                    `;
+                }
+                inputsHTML += `
+                        </select>
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+        
+    </script>
+
+  <div class="head">
+      <b>ท่านได้ทำสิ่งต่อไปนี้สำหรับตัวท่าน หรือครัวเรือนของท่านหรือไม่</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 3 (การ์ดคำถาม)</b>
+  </div>
+  
+<!--------------------------------------------- BT11-BT16  --------------------------------------------->
+  
+<div id="container2"></div>
+
+    <script>
+        var components = [
+            { id: 'BT11', label: 'วางแผนจัดการรายรับ-รายจ่าย' },
+            { id: 'BT12', label: 'จดบันทึกค่าใช้จ่าย' },
+            { id: 'BT13', label: 'เก็บเงินสำหรับจ่ายบิลแยกจากค่าใช้จ่ายประจำวัน' },
+            { id: 'BT14', label: 'จดบันทึกบิลที่ใกล้ครบกำหนดจ่ายเพื่อจ่ายให้ตรงเวลา' },
+            { id: 'BT15', label: 'ใช้แอปพลิเคชันหรือเครื่องมือในการบริหารจัดการเงินและติดตามการใช้จ่าย' },
+            { id: 'BT16', label: 'ตั้งการชำระเงินอัตโนมัติสำหรับค่าใช้จ่ายประจำ' }
+        ];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container2');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} : ${component.label}</b>
+                    </div>
+                    <div class="frame2">
+                      <select id="${component.id}">
+                          <option value="">-- กรุณาเลือก --</option>
+                          <option value="0">0 - ไม่ทำ</option>
+                          <option value="1">1 - ทำ</option>
+                      </select>
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+        
+    </script>
+
+  <div class="head">
+      <b><u>ในรอบ 12 เดือนที่ผ่านมา</u> วิธีใดเป็นวิธีที่ท่านใช้ในการเก็บออม</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 4 (การ์ดคำถาม)</b>
+  </div>
+  
+<!--------------------------------------------- BT17-BT22  --------------------------------------------->
+  
+<div id="container3"></div>
+
+    <script>
+        var components = [
+    { id: 'BT17', label: '<b>เก็บเป็นเงินสด</b>', nn: '' },
+    { id: 'BT18', label: '<b>เก็บเงินในบัญชีที่เปิดไว้เพื่อออมเงินโดยเฉพาะ</b>', nn: '' },
+    { id: 'BT19', label: '<b>ให้เงินแก่คนในครอบครัว/ครัวเรือนเก็บแทนท่าน</b>', nn: '(<b>รวม</b> ญาติและบุคคลอื่นนอกครัวเรือน)' },
+    { id: 'BT20', label: '<b>ฝากเงินในสหกรณ์ กลุ่มออมทรัพย์/กองทุนหมู่บ้าน/ธนาคารชุมชน/เครดิตยูเนี่ยน</b>', nn: '' },
+    { id: 'BT21', label: '<b>นำไปลงทุนในเงินดิจิทัล</b>', nn: '(เช่น Bitcoin, Ethereum และ Libra)' },
+    { id: 'BT22', label: '<b>นำไปลงทุนในผลิตภัณฑ์ทางการเงินต่าง ๆ</b>', nn: '(เช่น พันธบัตร หุ้น กองทุนรวม) (<b>ไม่รวม</b> กบข.)' },
+    { id: 'BT23', label: '<b>อื่น ๆ (ระบุ)</b>', nn: '' }
+];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container3');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} :</b> ${component.label}
+                    </div>
+                    ${component.nn ? `<div class="nn2">${component.nn}</div>` : ''}
+                    <div class="frame2">
+                        <select id="${component.id}">
+                            <option value="">-- กรุณาเลือก --</option>
+                            <option value="0">0 - ไม่ใช้</option>
+                            <option value="1">1 - ใช้</option>
+                        </select>
+                `;
+                if (component.id === 'BT23') {
+                    inputsHTML += `
+                        <div id="BT23T">
+                            <input id="BT23_T" class="etc" type="text" placeholder="ระบุ">
+                        </div>
+                    `;
+                }
+                inputsHTML += `
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+
+    </script>
+  
+<!--------------------------------------------- BT24 --------------------------------------------->
+
+  <div class="head">
+      <b>BT24 : ท่านคิด<u>วางแผนการเก็บออมไว้สำหรับยามชรา/เกษียณอายุ</u> หรือไม่</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 5 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT24">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="1">1 - ยังไม่ได้คิด/วางแผน</option>
+          	<option value="2">2 - คิด/วางแผนแล้ว แต่ยังไม่เริ่มทำ</option>
+          	<option value="3">3 - คิด/วางแผนแล้ว แต่ยังทำไม่ได้ตามแผนที่วางไว้/ตั้งใจไว้</option>
+          	<option value="4">4 - คิด/วางแผนแล้ว และทำได้ตามแผนที่วางไว้</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT25 --------------------------------------------->
+
+  <div class="head">
+      <b>BT25 : ตั้งแต่วันนี้ หากท่าน<u>ต้องหยุดทำงานกะทันหันโดยไม่มีกำหนด</u> ท่านคิดว่า <u>เงินออมที่ท่านสะสม</u>จากอดีตจนถึงปัจจุบัน<br>จะนำมาเป็นค่าใช้จ่ายของท่านได้นานเท่าไร (โดยมีค่าใช้จ่ายต่อเดือนเท่าเดิม)</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 6 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT25">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="1">1 - ไม่ทราบ/ไม่แน่ใจ</option>
+          	<option value="2">2 - น้อยกว่า 1 สัปดาห์</option>
+          	<option value="3">3 - อยู่ได้อย่างน้อย 1 สัปดาห์ แต่ไม่ถึง 1 เดือน</option>
+          	<option value="4">4 - อยู่ได้อย่างน้อย 1 เดือน แต่ไม่ถึง 3 เดือน</option>
+          	<option value="5">5 - อยู่ได้อย่างน้อย 3 เดือน แต่ไม่ถึง 6 เดือน</option>
+          	<option value="6">6 - ตั้งแต่ 6 เดือนขึ้นไป</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- ข. --------------------------------------------->
+
+<div class="head0"><b>หมวด ข. ความผันผวนทางเศรษฐกิจ</b></div>
+  
+<!--------------------------------------------- BT26 --------------------------------------------->
+
+  <div class="head">
+      <b>BT26 : ท่านเคยประสบปัญหาเงินไม่พอจ่ายหรือไม่</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT26">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="0">0 - ไม่เคย</option>
+          	<option value="1">1 - เคย</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT27-BT34 --------------------------------------------->
+
+<div id="27Div">
+
+  <div class="head">
+      <b><u>ครั้งล่าสุด</u>ที่ท่านประสบปัญหาเงินไม่พอจ่าย ท่านเลือกทำอย่างไรบ้าง</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 7 (การ์ดคำถาม)</b>
+  </div>
+  
+<div id="container4"></div>
+
+    <script>
+        var components = [
+            { id: 'BT27', label: '<b>ถอนเงินจากบัญชีออกมาใช้</b>', nn: '' },
+            { id: 'BT28', label: '<b>ใช้เงินให้น้อยลง/หารายได้เพิ่ม/ขายทรัพย์สินที่มีอยู่</b>', nn: '' },
+            { id: 'BT29', label: '<b>ขอเงินช่วยเหลือจากครอบครัว/หรือเพื่อน</b> (โดยไม่ต้องคืน)', nn: '' },
+            { id: 'BT30', label: '<b>ขอยืมเงินจากครอบครัว/เพื่อน/นายจ้าง หรือขอค่าจ้างล่วงหน้า</b> (โดยต้องคืนแต่ไม่มีดอกเบี้ย)', nn: '' },
+            { id: 'BT31', label: '<b>จำนำสิ่งของที่มีอยู่ หรือจำนองอสังหาริมทรัพย์</b>', nn: '' },
+            { id: 'BT32', label: '<b>กู้ยืมเงินจากสหกรณ์หรือกลุ่มออมทรัพย์/ใช้บัตรเครดิต/สินเชื่อส่วนบุคคลภายใต้การกำกับ/นาโนไฟแนนซ์/พิโกไฟแนนซ์</b>', nn: '' },
+            { id: 'BT33', label: '<b>กู้ยืมเงินจากเงินกู้นอกระบบ</b>', nn: '(<b>รวม</b> ครอบครัว/เพื่อน/นายจ้าง โดยต้องคืนและมีดอกเบี้ย)' },
+            { id: 'BT34', label: '<b>จ่ายชำระเงินค่าใช้จ่ายต่าง ๆ ล่าช้า หรือ งดจ่ายชำระงวดนั้น ๆ</b>', nn: '' }
+        ];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container4');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} :</b> ${component.label}
+                    </div>
+                    ${component.nn ? `<div class="nn2">${component.nn}</div>` : ''}
+                    <div class="frame2">
+                      <select id="${component.id}">
+                          <option value="">-- กรุณาเลือก --</option>
+                          <option value="0">0 - ไม่เลือก</option>
+                          <option value="1">1 - เลือก</option>
+                      </select>
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+        
+    </script>
+    
+</div>
+  
+<!--------------------------------------------- BT35-BT37 --------------------------------------------->
+
+  <div class="head">
+      <b><u>ในรอบ 2 ปีที่ผ่านมา</u> ท่านเคยเจอเหตุการณ์เหล่านี้หรือไม่</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 8 (การ์ดคำถาม)</b>
+  </div>
+  
+<div id="container5"></div>
+
+    <script>
+        var components = [
+            { id: 'BT35', label: '<b>ท่านเคยเชื่อคำชวน/คำแนะนำให้ลงทุนในผลิตภัณฑ์ทางการเงินที่ท่านทราบในภายหลังว่าเป็นการหลอกลวงหรือไม่</b>', nn: 'เช่น ชวนลงทุนหรือออมเงินที่ให้ผลตอบแทนสูงในช่วงแรกแล้วต่อมาไม่จ่ายผลตอบแทนอีกเลย' },
+            { id: 'BT36', label: '<b>ท่านเคยให้ข้อมูลทางการเงินหรือข้อมูลส่วนบุคคลแก่มิจฉาชีพผ่านทางอีเมล โทรศัพท์ หรือแอปพลิเคชันสื่อสาร เช่น ไลน์ เฟซบุ๊ก หรือไม่</b>', nn: '' },
+            { id: 'BT37', label: '<b>ท่านเคยถูกหลอกให้เสียเงินโดยมิจฉาชีพทางออนไลน์ผ่านช่องต่าง ๆ หรือไม่</b>', nn: 'เช่น อีเมล เว็บไซต์ โทรศัพท์ ไลน์ SMS หรือช่องทางอื่น ๆ' }
+        ];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container5');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} :</b> ${component.label}
+                    </div>
+                    ${component.nn ? `<div class="nn2">${component.nn}</div>` : ''}
+                    <div class="frame2">
+                      <select id="${component.id}">
+                          <option value="">-- กรุณาเลือก --</option>
+                          <option value="0">0 - ไม่เคย</option>
+                          <option value="1">1 - เคย</option>
+                      </select>
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+        
+    </script>
+  
+<!--------------------------------------------- ค.  --------------------------------------------->
+
+<div class="head0"><b>ค.  ความรู้ความเข้าใจทางการเงิน</b></div>
+  
+  <div class="nn">
+      <b>(ไม่บอกตัวเลือก ให้ผู้ตอบสัมภาษณ์ตอบด้วยตนเอง)</b>
+  </div>
+  
+<!--------------------------------------------- BT38 --------------------------------------------->
+
+  <div class="head">
+      <b>BT38 : สมมติว่าอีก 1 ปีข้างหน้าเกิดภาวะเงินเฟ้อ ท่านคิดว่าเงิน 500 บาท ที่ท่านมีอยู่ในวันนี้จะซื้อของได้มากขึ้นหรือน้อยลงในปีหน้า</b>
+  </div>
+
+  <div class="nn">
+      <b>แสดงการ์ดที่ 9 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT38">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="0">0 - ไม่ทราบ</option>
+          	<option value="1">1 - มากกว่า</option>
+          	<option value="2">2 - เท่ากัน</option>
+          	<option value="3">4 - น้อยกว่า</option>
+          	<option value="3">4 - ขึ้นอยู่กับชนิดของสินค้าที่จะซื้อ</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT39 --------------------------------------------->
+
+  <div class="head">
+      <b>BT39 : สมมติว่าท่านยืมเงินเพื่อน 100 บาทในวันนี้ และเพื่อนให้ท่านนำเงินมาคืน 120 บาทในอีก 1 ปีข้างหน้า ท่านคิดว่า ท่านได้จ่ายดอกเบี้ยให้แก่เพื่อนในการยืมเงินครั้งนี้เท่าไร</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 10 (การ์ดคำถาม)</b><br>
+      <br>ตอบถูก : <b>20 บาท หรือร้อยละ 20 หรือ 20% ต่อปี</b>
+      <br>ตอบผิด : ตอบตัวเลขที่ไม่ใช่ 20 บาท หรือร้อยละ 20 หรือ 20% ต่อปี
+  </div>
+  
+  <div class="frame">
+      <select id="BT39">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="0">0 - ไม่ทราบ</option>
+          	<option value="1">1 - ตอบถูก</option>
+          	<option value="2">2 - ตอบผิด</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT40 --------------------------------------------->
+
+  <div class="head">
+      <b>BT40 : สมมติว่าท่านฝากเงินเข้าบัญชีออมทรัพย์ 100 บาท โดยจะได้ดอกเบี้ยร้อยละ 2 ต่อปี และในระหว่างปีท่านไม่ได้ฝากเงินเพิ่มหรือถอนเงินออกจากบัญชีดังกล่าวเลย เมื่อครบ 1 ปี ท่านคิดว่าจะมีเงินในบัญชีรวมดอกเบี้ยเป็นเท่าไร</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 11 (การ์ดคำถาม)</b><br>
+      <br>ตอบถูก : <b>102 บาท</b>
+      <br>ตอบผิด : ตอบตัวเลขที่ไม่ใช่ 102 บาท
+  </div>
+  
+  <div class="frame">
+      <select id="BT40">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="0">0 - ไม่ทราบ</option>
+          	<option value="1">1 - ตอบถูก</option>
+          	<option value="2">2 - ตอบผิด</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT41 --------------------------------------------->
+
+  <div class="head">
+      <b>BT41 : จากข้อ 3. ท่านคิดว่าเมื่อครบ 5 ปี ท่านจะมีเงินในบัญชีรวมดอกเบี้ยเป็นจำนวนเท่าไร (โดยไม่มีการฝากเพิ่ม หรือถอนเงินเลย)</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 12 (การ์ดคำถาม)</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT41">
+          <option value="">-- กรุณาเลือก --</option>
+          	<option value="0">0 - ไม่ทราบ</option>
+          	<option value="1">1 - มากกว่า 110 บาท</option>
+          	<option value="2">2 - 110 บาท</option>
+          	<option value="3">3 - น้อยกว่า 110 บาท</option>
+          	<option value="4">4 - ข้อมูลไม่เพียงพอที่จะตอบคำถาม</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT42-BT45  --------------------------------------------->
+
+  <div class="head">
+      <b>ท่านมีความรู้ความเข้าใจในเรื่องดังต่อไปนี้อย่างไร</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 13 (การ์ดคำถาม)</b>
+  </div>
+  
+<div id="container6"></div>
+
+    <script>
+        var components = [
+            { id: 'BT42', label: '<b>ท่านทราบไหมว่า เงินเฟ้อ คือ การที่ราคาสินค้าและอาหารแพงขึ้นเมื่อเวลาผ่านไป</b>' },
+            { id: 'BT43', label: '<b>ท่านทราบไหมว่า ถ้ามีคนชวนท่านไปเล่นแชร์หรือลงทุนที่ให้ดอกเบี้ยสูง ๆ ก็มีโอกาสที่จะถูกหลอกหรือขาดทุนสูงเช่นกัน</b>' },
+            { id: 'BT44', label: '<b>ท่านทราบไหมว่า ถ้าท่านมีเงินเก็บจำนวนหนึ่ง แล้วแบ่งเงินไปฝากธนาคาร ซื้อที่ดิน ซื้อทองคำ และซื้อสลากออมสิน ถือเป็นการกระจายความเสี่ยง</b>' },
+            { id: 'BT45', label: '<b>ท่านทราบไหมว่า การแชร์หรือโพสต์ข้อมูลส่วนบุคคลในสื่อโซเชียลอาจเสี่ยงทำให้มิจฉาชีพนำข้อมูลไปใช้ในทางผิดกฎหมายได้ เช่น หมายเลขบัตรประชาชน หมายเลขบัญชีธนาคาร ที่อยู่ ข้อมูลวันเกิด</b>' }
+        ];
+
+        function generateInputElements(components) {
+            var container = document.getElementById('container6');
+            var inputsHTML = '';
+            components.forEach(function(component) {
+                inputsHTML += `
+                    <div class="head2">
+                        <b>${component.id} :</b> ${component.label}
+                    </div>
+                    ${component.nn ? `<div class="nn">${component.nn}</div>` : ''}
+                    <div class="frame2">
+                      <select id="${component.id}">
+                          <option value="">-- กรุณาเลือก --</option>
+                          <option value="0">0 - ไม่ทราบ</option>
+                          <option value="1">1 - ทราบ</option>
+                          <option value="9">9 - ไม่แน่ใจ</option>
+                      </select>
+                    </div>
+                `;
+            });
+            container.innerHTML = inputsHTML;
+        }
+
+        generateInputElements(components);
+    </script>
+  
+<!--------------------------------------------- ง.  --------------------------------------------->
+
+<div class="head0"><b>หมวด ง.  หนี้สินของครัวเรือน</b></div>
+  
+<!--------------------------------------------- BT46 --------------------------------------------->
+
+  <div class="head">
+      <b>BT46 :</b> (ปัจจุบัน) <b>ครัวเรือนของท่านมีหนี้สินหรือไม่</b>
+  </div>
+  
+  <div class="frame">
+      <select id="BT46" class="G">
+          <option value=""></option>
+          	<option value="0">0 - ไม่มี</option>
+          	<option value="1">1 - มี</option>
+      </select>      
+  </div>
+  
+<div id="47Div">
+  
+<!--------------------------------------------- BT47 --------------------------------------------->
+
+  <div class="head">
+      <b>BT47 : โปรดระบุจำนวนเงิน หรือมูลค่าคงเหลือ (ณ ปัจจุบัน) ของหนี้สินนั้นโดยประมาณ (บาท)</b>
+  </div>
+  
+  <div class="frame">
+      <input id="BT47" type="text">
+  </div>
+  
+<!--------------------------------------------- BT48 --------------------------------------------->
+
+  <div class="head">
+      <b>BT48 : <u>ในรอบ 12 เดือนที่ผ่านมา</u> สถานการณ์การชำระหนี้ของครัวเรือนท่านเป็นอย่างไร สามารถชำระหนี้ได้ตามกำหนดหรือไม่</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 14 (การ์ดตัวเลือก)</b>
+  </div>
+  
+  <div class="frame">           
+      <select id="BT48">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value=".">จ่ายได้ตามกำหนด</option>
+          	<option value="1">1 - ไม่มีปัญหาแต่อย่างใด</option>
+          	<option value="2">2 - มีปัญหาในการหาเงินมาชำระหนี้ในบางครั้ง</option>
+          	<option value="3">3 - มีปัญหาในการหาเงินมาชำระหนี้บ่อยครั้งที่ครบรอบการชำระเงินกู้</option>
+          <option value=".">จ่ายไม่ได้ตามกำหนด</option>
+          	<option value="4">4 - ผิดนัดหรือค้างการชำระหนี้เป็นบางครั้ง</option>
+          	<option value="5">5 - ผิดนัดหรือค้างชำระหนี้บ่อยครั้ง และมีปัญหาทางการเงินค่อนข้างมาก</option>
+      </select>
+  </div>
+  
+<!--------------------------------------------- BT49 --------------------------------------------->
+
+  <div class="head">
+      <b>BT49 : หากปัจจุบันรายได้ครัวเรือนของท่านลดลงร้อยละ 20 สถานการณ์การชำระหนี้ของครัวเรือนท่านจะเป็นอย่างไร</b>
+  </div>
+  
+  <div class="nn">
+      <b>แสดงการ์ดที่ 14 (การ์ดตัวเลือก)</b>
+  </div>
+  
+  <div class="frame">           
+      <select id="BT49">
+          <option value="">-- กรุณาเลือก --</option>
+          <option value=".">จ่ายได้ตามกำหนด</option>
+          	<option value="1">1 - ไม่มีปัญหาแต่อย่างใด</option>
+          	<option value="2">2 - มีปัญหาในการหาเงินมาชำระหนี้ในบางครั้ง</option>
+          	<option value="3">3 - มีปัญหาในการหาเงินมาชำระหนี้บ่อยครั้งที่ครบรอบการชำระเงินกู้</option>
+          <option value=".">จ่ายไม่ได้ตามกำหนด</option>
+          	<option value="4">4 - ผิดนัดหรือค้างการชำระหนี้เป็นบางครั้ง</option>
+          	<option value="5">5 - ผิดนัดหรือค้างชำระหนี้บ่อยครั้ง และมีปัญหาทางการเงินค่อนข้างมาก</option>
+      </select>
+  </div>
+
+</div>
+</div>
+
+
+<!-------------------------------------------- NOTE -------------------------------------------->
+<!--
+<div class="note">
+  <b>NOTE :</b>
+   <span class="remark">(C1.1_NOTE)</span>
+  <div id="rec01_note" class="notebox" contenteditable="true">*** เพิ่มฟังก์ชันพิมพ์ด้วยเสียง ***</div>
+</div>
+-->
+
+<div id="outer">
+  <div class="inner"><button onclick="index()">Index</button></div>
+  <div class="inner"><button onclick="next()">Next</button></div>
+</div>
+
+<button onclick="resetLocalStorage()">Reset localStorage</button>
+<button onclick="()">Check</button>
+
+
+<!----------------------------------------------------------------------------------------------------------->
+
+<script>
+
+<!--------------------------------------------------------------------->
+
+function index() {
+    saveToLocalStorage();
+    window.location.href = 'index.html';}
+
+<!--------------------------------------------------------------------->
+
+function next() {
+    saveToLocalStorage();
+    window.location.href = 'Chapter 2.html';}
+
+<!--------------------------------------------------------------------->
+
+function checkDisability(input) {
+        var selectElement = document.getElementById(input);
+        var selectedValue = selectElement.value;
+        var message = document.createElement('div');
+        
+        if (selectedValue === ".") {
+        	alert('กรุณาเลือกคำตอบ');
+            message.textContent = ('กรุณาเลือกคำตอบ');
+            message.style.color = "red";
+            var selectDiv = selectElement.parentElement;
+            selectDiv.appendChild(message);
+            setTimeout(function() {
+                message.remove();
+            }, 3000);
+            selectElement.value = "";
+        }
+}
+
+<!--------------------------------------------------------------------->
+
+// อื่น ๆ ระบุ...
+
+function Others(fieldId) {
+    var field = document.getElementById(fieldId);
+    var others = document.getElementById(fieldId + "T");
+    var shouldShowOthers = {
+        "BT23": "1",
+        "ENUM_SKF": "05"
+    };
+
+    if (shouldShowOthers[fieldId] && field.value === shouldShowOthers[fieldId]) {
+        others.style.display = "block";
+        others.value = "";
+    } else {
+        others.style.display = "none";
+    }
+}
+
+<!--------------------------------------------------------------------->
+    
+function UnHide(inputId, divId, customValue) {
+    var input = document.getElementById(inputId);
+    var div = document.getElementById(divId);
+
+    if (parseInt(input.value) === customValue) { 
+    	div.style.display = 'none';
+    } 
+    else {
+    	div.style.display = 'block';
+    }
+}
+
+<!--------------------------------------------------------------------->
+    
+function Enum() {
+    var input = document.getElementById('ENUM_SKF');
+    var div = document.getElementById('cont');
+
+    if (parseInt(input.value) > 1) { 
+    	div.style.display = 'none';
+    } 
+    else {
+    	div.style.display = 'block';
+    }
+}
+    
+<!--------------------------------------------------------------------->
+    
+function allF() {
+    checkDisability('ENUM_SKF');
+    Enum();
+    Others('ENUM_SKF', 'ENUM_SKFT');
+    Others('BT23', 'BT23T');
+    UnHide('BT26', '27Div', 0);
+    UnHide('BT46', '47Div', 0);
+    checkDisability('BT49');
+}
+    
+<!--------------------------------------------------------------------->
+
+    var elements = document.querySelectorAll("[id]");
+    var inputIds = Array.from(elements).map(function(element) {
+        return element.id;
+    });
+    
+<!--------------------------------------------------------------------->
+
+function saveToLocalStorage() {
+    inputIds.forEach(function(id) {
+        localStorage.setItem(id, document.getElementById(id).value);
+    });
+}
+
+<!--------------------------------------------------------------------->
+
+function getLocalStorage() {
+	document.getElementById('BT46').value = parseInt(localStorage.getItem("AE00"));
+}
+
+<!--------------------------------------------------------------------->
+    
+	window.addEventListener('load', function() {
+
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+    radioButtons.forEach(function(radioButton) {
+        var storedValue = localStorage.getItem(radioButton.name);
+        if (storedValue === radioButton.value) {
+            radioButton.checked = true;
+        }
+    });
+
+    radioButtons.forEach(function(radioButton) {
+        radioButton.addEventListener('change', function() {
+            localStorage.setItem(this.name, this.value);
+            saveToLocalStorage();
+            getLocalStorage();
+            allF();
+        });
+    });
+});
+
+    window.onload = function() {
+        inputIds.forEach(function(id) {
+            var inputField = document.getElementById(id);
+            inputField.addEventListener('input', function() {
+            saveToLocalStorage();
+            getLocalStorage();
+            allF();
+            });
+
+            var value = localStorage.getItem(id);
+            if (value !== null) {
+                inputField.value = value;
+            } else {
+                inputField.value = "";
+            }
+        });
+        saveToLocalStorage();
+        getLocalStorage();
+        allF();
+    };
+
+<!--------------------------------------------------------------------->
+
+function resetLocalStorage() {
+    localStorage.clear();
+    alert("localStorage has been reset.");
+
+    window.onload();
+
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(function(radioButton) {
+        var storedValue = localStorage.getItem(radioButton.name);
+        if (storedValue === radioButton.value) {
+            radioButton.checked = true;
+        } else {
+            radioButton.checked = false;
+        }
+    });
+
+    allF();
+}
+
+</script>
+
+</body>
+</html>
